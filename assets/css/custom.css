@@ -8,4 +8,5 @@
   max-width: 50rem;             /* keep it from stretching too wide */
   margin: 1.5rem auto 0 auto;   /* space above & center it */
   text-align: center;           /* keep it centered under your name */
+  text-transform: none !important;
 }
