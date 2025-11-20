@@ -1,11 +1,11 @@
 /* Custom styling for the intro paragraph under your name */
 
 #header .content .inner .tagline {
-  font-family: "Georgia", "Times New Roman", serif;  /* or a nicer font */
+  font-family: "Verdana", sans-serif;  /* or a nicer font */
   font-size: 1rem;              /* bump this up or down */
-  line-height: 1.6;             /* spacing between lines */
+  line-height: 2;             /* spacing between lines */
   color: #f5f5f5;               /* light text */
-  max-width: 26rem;             /* keep it from stretching too wide */
+  max-width: 50rem;             /* keep it from stretching too wide */
   margin: 1.5rem auto 0 auto;   /* space above & center it */
   text-align: center;           /* keep it centered under your name */
 }
