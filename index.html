@@ -191,56 +191,63 @@
 
 						<!-- Here is a the "Contact" card. -->
 						<article id="contact">
-							<h2 class="major">Contact</h2>
+  							<h2 class="major">Contact</h2>
 
-							<!-- Address + photo side by side -->
-							<div class="contact-top">
-								<div class="contact-text">
-									<p>
-										<b>Address:</b><br>
-										Office XYZ, Physics Department<br>
-										McGill University<br>
-										Montréal, QC, Canada<br>
-										<!-- Edit this text to your real office/location -->
-									</p>
-									<p>
-										<b>Email:</b><br>
-										christopher.sheridan2@mail.mcgill.ca
-									</p>
-								</div>
+  							<!-- Address + photo side by side -->
+  							<div class="contact-top">
+    							<div class="contact-text">
+     								<p>
+        								<b>Address:</b><br>
+        								Office XYZ, Physics Department<br>
+        								McGill University<br>
+        								Montréal, QC, Canada<br>
+        								<!-- Edit this to your actual office/location -->
+      								</p>
+      								<p>
+        								<b>Email:</b><br>
+								        christopher.sheridan2@mail.mcgill.ca
+      								</p>
+    							</div>
 
-								<div class="contact-image">
-									<img src="images/picture.jpg" alt="My office / campus photo">
-								</div>
-							</div>
+    							<div class="contact-image">
+      								<img src="images/picture.jpg" alt="My office / campus photo">
+    							</div>
+  							</div>
 
-							<!-- Contact form -->
-							<form method="post" action="mailto:christopher.sheridan2@mail.mcgill.ca" enctype="text/plain">
-								<div class="fields">
-									<div class="field half">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="5"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li>
-										<input type="submit" value="Submit" class="primary" />
-									</li>
-									<li>
-										<input type="reset" value="Clear" />
-									</li>
-								</ul>
+	  						<!-- Contact form using Formspree -->
+							<form
+								id="contact-form"
+							    method="POST"
+							    action="https://formspree.io/f/xpweaajd"
+							  >
+							    <div class="fields">
+							      <div class="field half">
+							        <label for="name">Name</label>
+							        <input type="text" name="name" id="name" required />
+							      </div>
+							      <div class="field half">
+							        <label for="email">Email</label>
+							        <input type="email" name="email" id="email" required />
+							      </div>
+							      <div class="field">
+							        <label for="message">Message</label>
+							        <textarea name="message" id="message" rows="5" required></textarea>
+							      </div>
+							    </div>
+							    <ul class="actions">
+							      <li>
+							        <button type="submit" class="primary">Submit</button>
+							      </li>
+							      <li>
+							        <button type="reset">Clear</button>
+							      </li>
+							    </ul>
+							
+							    <!-- Status message -->
+							    <p id="form-status" class="form-status"></p>
 							</form>
 						</article>
-					</div>
+
 
 					<!-- This is the footer that appears at the bottom of the page -->
 					<footer id="footer">
@@ -266,9 +273,39 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			  	window.addEventListener("DOMContentLoaded", function () {
+			    const form = document.getElementById("contact-form");
+			    const status = document.getElementById("form-status");
+			
+			    form.addEventListener("submit", async function (event) {
+			      event.preventDefault(); // stop normal form submit
+			      status.textContent = "Sending...";
+			      const data = new FormData(form);
+			
+			      try {
+			        const response = await fetch(form.action, {
+			          method: form.method,
+			          body: data,
+			          headers: { "Accept": "application/json" }
+			        });
+			
+			        if (response.ok) {
+			          status.textContent = "Thanks! Your message has been sent.";
+			          form.reset();
+			        } else {
+			          status.textContent = "Oops, something went wrong. Please try again.";
+			        }
+			      } catch (error) {
+			        status.textContent = "Network error. Please try again.";
+			      }
+			    });
+			  });
+			</script>				
 
 	</body>
 </html>
+
 
 
 
