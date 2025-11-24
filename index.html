@@ -192,56 +192,53 @@
 						<!-- Here is a the "Contact" card. -->
 						<article id="contact">
 							<h2 class="major">Contact</h2>
-							<p> 
-								<b>Email:</b> 
-							</p>
-							<p> 
-								<b>Address:</b> 
-							</p>
 
-							<!-- 	Here are the fancy icons that link to your social media.
-								These icons are rendered using Font Awesome fonts, and you can find more icons
-								here: https://fontawesome.com/icons
-							-->
-							<ul class="icons">
-								<!-- The Twitter icon -->
-								<li>
-									<!-- 	Note that you need to change the link to point to your page.
-										Replace "#" with your Twitter profile page.
-									-->
-									<a href="#" class="icon fa-twitter">
-										<span class="label">Twitter</span>
-									</a>
-								</li>
-								<!-- The Facebook icon -->
-								<li>
-									<a href="#" class="icon fa-facebook">
-										<span class="label">Facebook</span>
-									</a>
-								</li>
-								<!-- The Instagram icon -->
-								<li>
-									<a href="#" class="icon fa-instagram">
-										<span class="label">Instagram</span>
-									</a>
-								</li>
-								<!-- The GitHub icon -->
-								<li>
-									<a href="#" class="icon fa-github">
-										<span class="label">GitHub</span>
-									</a>
-								</li>
-								<!-- 	We can add a new icon by searching on the Font Awesome website
-									for the correct class name and inserting it as a new list item.
+							<!-- Address + photo side by side -->
+							<div class="contact-top">
+								<div class="contact-text">
+									<p>
+										<b>Address:</b><br>
+										Office XYZ, Physics Department<br>
+										McGill University<br>
+										Montréal, QC, Canada<br>
+										<!-- Edit this text to your real office/location -->
+									</p>
+									<p>
+										<b>Email:</b><br>
+										christopher.sheridan2@mail.mcgill.ca
+									</p>
+								</div>
 
-									We found "envelope" here: https://fontawesome.com/icons/envelope
-								-->
-								<!-- <li>
-									<a href="#" class="icon fa-envelope">
-										<span class="label">Email</span>
-									</a>
-								</li> -->
-							</ul>
+								<div class="contact-image">
+									<img src="images/picture.jpg" alt="My office / campus photo">
+								</div>
+							</div>
+
+							<!-- Contact form -->
+							<form method="post" action="mailto:christopher.sheridan2@mail.mcgill.ca" enctype="text/plain">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="5"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li>
+										<input type="submit" value="Submit" class="primary" />
+									</li>
+									<li>
+										<input type="reset" value="Clear" />
+									</li>
+								</ul>
+							</form>
 						</article>
 					</div>
 
@@ -272,6 +269,7 @@
 
 	</body>
 </html>
+
 
 
 
