@@ -14,24 +14,32 @@
 
 /* Contact card layout */
 #contact .contact-top {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: flex-start;
-	gap: 2rem;
-	margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 #contact .contact-text {
-	flex: 1 1 250px;
+  flex: 1 1 250px;
 }
 
 #contact .contact-image {
-	flex: 0 0 260px;
+  flex: 0 0 260px;
 }
 
 #contact .contact-image img {
-	width: 100%;
-	height: auto;
-	object-fit: cover;
-	border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
+
+/* Status text under the form */
+#contact .form-status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
