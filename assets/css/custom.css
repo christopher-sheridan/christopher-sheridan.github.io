@@ -69,3 +69,34 @@
     max-width: 140px;
   }
 }
+
+/* Make the header content behave better on small screens */
+@media screen and (max-width: 736px) {
+
+  /* Stop over-aggressive centering and allow scroll if needed */
+  #header .content {
+    justify-content: flex-start;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    overflow-y: auto;
+  }
+
+  /* Remove extra inner padding the template adds */
+  #header .content .inner {
+    padding: 0;
+  }
+
+  /* Shrink the portrait a bit on mobile */
+  #header .content .inner img {
+    width: 65%;
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  /* Slightly smaller tagline so it fits more comfortably */
+  #header .content .inner .tagline {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+}
+
