@@ -36,7 +36,7 @@
 }
 
 #contact .contact-image img {
-  max-width: 200px;      /* tweak as you like */
+  max-width: 300px;      /* tweak as you like */
   height: auto;
   object-fit: contain;
   display: block;
