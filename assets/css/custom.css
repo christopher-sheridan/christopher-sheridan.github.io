@@ -10,3 +10,28 @@
   text-align: center;           /* keep it centered under your name */
   text-transform: none !important;
 }
+
+
+/* Contact card layout */
+#contact .contact-top {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+#contact .contact-text {
+	flex: 1 1 250px;
+}
+
+#contact .contact-image {
+	flex: 0 0 260px;
+}
+
+#contact .contact-image img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 0.5rem;
+}
