@@ -12,28 +12,43 @@
 }
 
 
-/* Contact card layout */
+/* Contact card: top row (address + logo) */
 #contact .contact-top {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;   /* vertically center logo relative to text */
   gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* space between top row and email */
 }
 
 #contact .contact-text {
   flex: 1 1 250px;
 }
 
+/* Tighten paragraph spacing inside the address area */
+#contact .contact-text p {
+  margin: 0;
+}
+
+/* Logo on the right */
 #contact .contact-image {
-  flex: 0 0 260px;
+  flex: 0 0 auto;
 }
 
 #contact .contact-image img {
-  width: 100%;
+  max-width: 180px;      /* tweak as you like */
   height: auto;
-  object-fit: cover;
-  border-radius: 0.5rem;
+  object-fit: contain;
+  display: block;
+}
+
+/* Email block below address+logo */
+#contact .contact-email {
+  margin-bottom: 1.5rem; /* space between email and form */
+}
+
+#contact .contact-email p {
+  margin: 0;
 }
 
 /* Status text under the form */
@@ -43,3 +58,14 @@
   font-style: italic;
 }
 
+/* Mobile: stack address and logo nicely */
+@media screen and (max-width: 736px) {
+  #contact .contact-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #contact .contact-image img {
+    max-width: 140px;
+  }
+}
