@@ -17,7 +17,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;   /* vertically center logo relative to text */
-  gap: 2rem;
+  gap: 1rem;
   margin-bottom: 1.5rem; /* space between top row and email */
 }
 
