@@ -18,7 +18,7 @@
   flex-wrap: wrap;
   align-items: center;   /* vertically center logo relative to text */
   gap: 1rem;
-  margin-bottom: 1.5rem; /* space between top row and email */
+  margin-bottom: 1rem; /* space between top row and email */
 }
 
 #contact .contact-text {
